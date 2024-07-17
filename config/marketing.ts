@@ -11,8 +11,8 @@ export const maketingNavConfig: marketingNavConfig = {
       href: "#feature",
     },
     {
-      title: "価格",
-      href: "/price",
+      title: "お問い合わせ",
+      href: "#contact",
     },
   ],
 };

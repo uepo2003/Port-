@@ -1,11 +1,12 @@
 import { allPosts } from "@/.contentlayer/generated";
-import { Mdx } from "@/components/mdx-components";
+import { Mdx } from "@/components/MdxComponents";
 import { buttonVariants } from "@/components/ui/button";
 import { cn, formatDate } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { Icons } from "@/components/Icon";
 
 interface PostPageProps {
   params: {
@@ -14,8 +15,14 @@ interface PostPageProps {
 }
 
 async function getPostFromParams(params: any) {
-  const slug = params?.slug?.join("/");
-  const post = allPosts.find((post) => post.slugAsParams === slug);
+  const slug = params?.slug!
+  const ppp =  (allPosts[0]._raw.flattenedPath.split("/"))[1]
+
+
+  console.log(ppp,"chinpo")
+  console.log(slug)
+  const post = allPosts.find((post) => (post._raw.flattenedPath.split("/"))[1] === slug);
+console.log(post)
 
   if (!post) {
     null;
@@ -55,9 +62,11 @@ export default async function PostPage({ params }: PostPageProps) {
     <article className="container max-w-3xl py-6 lg:py-10">
       <Link
         href={"/blog"}
-        className={cn(buttonVariants({ variant: "ghost" }), "hidden")}
+        className={cn(buttonVariants({ variant: "ghost" }), 
+        "absolute left-[170px] top-40 xl:inline-flex"
+      )}
       >
-        全ての記事を見る
+        <Icons.back className="mr-1"/>全ての記事を見る
       </Link>
       <div>
         {post.date && (
@@ -89,7 +98,7 @@ export default async function PostPage({ params }: PostPageProps) {
           href={"/blog"}
           className={cn(buttonVariants({ variant: "ghost" }))}
         >
-          全ての記事を見る
+          <Icons.back className="mr-1"/>全ての記事を見る
         </Link>
       </div>
     </article>
