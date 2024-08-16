@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils";
 import { ButtonProps, buttonVariants } from "./ui/button";
 import { useState } from "react";
-import { Icons } from "./icon";
+import { Icons } from "./Icon";
 import { useRouter } from "next/navigation";
 import { toast } from "./ui/use-toast";
 
@@ -56,7 +56,7 @@ export const PostCreateButton = ({
         {
           "cursor-not-allowed opacity-60": isLoading,
         },
-        className,
+        className
       )}
       disabled={isLoading}
       {...props}

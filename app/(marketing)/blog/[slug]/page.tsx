@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { Icons } from "@/components/icon";
+import { Icons } from "@/components/Icon";
 
 interface PostPageProps {
   params: {
@@ -16,9 +16,9 @@ interface PostPageProps {
 
 async function getPostFromParams(params: any) {
   const slug = params?.slug!;
-  
+
   const post = allPosts.find(
-    (post) => post._raw.flattenedPath.split("/")[1] === slug,
+    (post) => post._raw.flattenedPath.split("/")[1] === slug
   );
 
   if (!post) {
@@ -61,7 +61,7 @@ export default async function PostPage({ params }: PostPageProps) {
         href={"/blog"}
         className={cn(
           buttonVariants({ variant: "ghost" }),
-          "absolute left-[170px] top-40 xl:inline-flex",
+          "absolute left-[170px] top-40 xl:inline-flex"
         )}
       >
         <Icons.back className="mr-1" />

@@ -9,7 +9,7 @@ import TableBlock from "./_components/TableBlock";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Icons } from "@/components/icon";
+import { Icons } from "@/components/Icon";
 import { format } from "date-fns";
 
 const ImageProp = dynamic(() => import("./_components/ImageProp"), {
@@ -45,7 +45,7 @@ const ArticlePage = async ({ params }: ArticleProps) => {
           href={"/articles"}
           className={cn(
             buttonVariants({ variant: "ghost" }),
-            "absolute left-[170px] top-40",
+            "absolute left-[170px] top-40"
           )}
         >
           <Icons.back className="mr-1" />

@@ -2,7 +2,7 @@
 
 import { SidebarNavItem } from "@/types";
 import { usePathname } from "next/navigation";
-import { Icons } from "./icon";
+import { Icons } from "./Icon";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
@@ -27,7 +27,7 @@ export const DashboardNav = ({ items }: DashboardNavProps) => {
               <span
                 className={cn(
                   "flex items-center rounded-md px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground",
-                  path === item.href ? "bg-accent" : "transparent",
+                  path === item.href ? "bg-accent" : "transparent"
                 )}
               >
                 <Icon className="mr-2 h-4 w-4" />

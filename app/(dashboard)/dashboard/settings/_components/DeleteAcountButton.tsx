@@ -14,14 +14,12 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { Icons } from "@/components/icon";
-
-
+import { Icons } from "@/components/Icon";
 
 export const DeleteAcountButton = () => {
   const handleDeleteAccountClick = () => {
     const form = document.getElementById(
-      "deleteAccountForm",
+      "deleteAccountForm"
     ) as HTMLFormElement | null;
     if (form) {
       form.requestSubmit();
@@ -40,7 +38,7 @@ export const DeleteAcountButton = () => {
                 variant: "ghost",
                 className:
                   "text-gray-700 hover:bg-red-500 hover:text-white text-lg py-6 px-10 mt-6 border-2",
-              }),
+              })
             )}
           >
             サインアウト

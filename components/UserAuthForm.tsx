@@ -9,7 +9,7 @@ import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { z } from "zod";
 import { useState } from "react";
-import { Icons } from "./icon";
+import { Icons } from "./Icon";
 import { toast } from "./ui/use-toast";
 import { signIn } from "next-auth/react";
 
