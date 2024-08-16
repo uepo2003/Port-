@@ -6,8 +6,8 @@ import Link from "next/link";
 import { formatDate } from "@/lib/utils";
 
 export const metadata = {
-  title : "Blog"
-}
+  title: "Blog",
+};
 
 export default async function BlogPage() {
   const posts = allPosts

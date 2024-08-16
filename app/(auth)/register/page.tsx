@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import type { Metadata } from "next";
-import UserAuthForm from "@/components/UserAuthForm";
+import { UserAuthForm } from "@/components/UserAuthForm";
 
 export const metadata: Metadata = {
   title: "アカウントの作成",
@@ -16,10 +16,10 @@ export default function RegisterPage() {
         href="/"
         className={cn(
           buttonVariants({ variant: "ghost" }),
-          "absolute left-4 md:left-8 md:top-8"
+          "absolute left-4 md:left-8 md:top-8",
         )}
       >
-       ホームに戻る
+        ホームに戻る
       </Link>
       <div className="h-full bg-muted lg:block hidden" />
       <div className="lg:p-8">

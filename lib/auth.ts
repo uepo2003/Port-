@@ -1,7 +1,8 @@
-import { NextAuthOptions } from "next-auth";
+import { NextAuthOptions, Session } from "next-auth";
 import GithubProvider from "next-auth/providers/github";
-// import { PrismaAdapter } from "@next-auth/prisma-adapter";
-// import { db } from "./db";
+import { PrismaAdapter } from "@next-auth/prisma-adapter";
+import { db } from "./db";
+import { JWT } from "next-auth/jwt";
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -13,19 +14,12 @@ export const authOptions: NextAuthOptions = {
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
-        return { ...token, id: user.id };
+        token.id = user.id;
       }
-
       return token;
     },
-    async session({ token, session }) {
-      if (token) {
-        session.user.id = token.id;
-        session.user.name = token.name;
-        session.user.email = token.email;
-        session.user.image = token.picture;
-      }
-
+    async session({ session, token }: { session: Session; token: JWT }) {
+      session.user.id = token.id;
       return session;
     },
   },
@@ -35,5 +29,5 @@ export const authOptions: NextAuthOptions = {
   pages: {
     signIn: "/login",
   },
-//   adapter: PrismaAdapter(db),
+  adapter: PrismaAdapter(db),
 };

@@ -3,6 +3,8 @@ import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { sitCongig } from "@/config/site";
+import { Toaster } from "@/components/ui/toaster";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const fontoNoto = Noto_Sans_JP({ subsets: ["latin"] });
 
@@ -34,16 +36,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  console.log("おはよう1");
   return (
-    <html lang="ja">
+    <html lang="ja" suppressHydrationWarning>
       <body
         className={cn(
           "bg-background antialiased min-h-screen",
           fontoNoto.className,
         )}
       >
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Toaster />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import type { Metadata } from "next";
-import UserAuthForm from "@/components/UserAuthForm";
+import { UserAuthForm } from "@/components/UserAuthForm";
 
 export const metadata: Metadata = {
   title: "Login",
@@ -16,7 +16,7 @@ export default function LoginPage() {
         href="/"
         className={cn(
           buttonVariants({ variant: "ghost" }),
-          "absolute left-4 md:left-8 md:top-8"
+          "absolute left-4 md:left-8 md:top-8",
         )}
       >
         戻る

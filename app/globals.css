@@ -67,3 +67,42 @@
     @apply bg-background text-foreground;
   }
 }
+
+h1.ce-header {
+  @apply text-3xl font-bold;
+}
+h2.ce-header {
+  @apply text-2xl font-semibold;
+}
+h3.ce-header {
+  @apply text-xl font-semibold;
+}
+h4.ce-header {
+  @apply text-lg font-semibold;
+}
+h5.ce-header {
+  @apply text-base font-semibold;
+}
+h6.ce-header {
+  @apply text-base font-semibold;
+}
+
+.heading {
+  @apply font-bold text-gray-900 tracking-tight mt-4;
+}
+
+.heading-1 {
+  @apply text-2xl;
+}
+
+.heading-2 {
+  @apply text-xl;
+}
+
+.paragraph {
+  @apply mb-4;
+}
+
+.code-block {
+  @apply rounded-md bg-gray-800 p-4 text-white font-mono text-sm;
+}

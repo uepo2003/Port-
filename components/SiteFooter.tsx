@@ -1,14 +1,18 @@
+import { sitCongig } from "@/config/site";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
 
-export const SiteFooter = () => {
+export const SiteFooter = ({
+  className,
+}: React.HTMLAttributes<HTMLElement>) => {
   return (
-    <footer>
+    <footer className={cn(className)}>
       <div className="container py-10 md:py-0 md:h-20">
         <p className="text-center text-sm md:text-left">
           Built by {""}
           <Link
-            href={"/login"}
+            href={sitCongig.links.githubUepo}
             className="underline underline-offset-4 font-medium"
             target="_blank"
             rel="noreferrer"
@@ -17,7 +21,7 @@ export const SiteFooter = () => {
           </Link>
           .Hosted on {""}
           <Link
-            href={"https://vercel.com/"}
+            href={sitCongig.links.vercel}
             className="underline underline-offset-4 font-medium"
             target="_blank"
             rel="noreferrer"

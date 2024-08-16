@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-    interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
-    href?: string;
+interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+  href?: string;
   disabled?: boolean;
 }
 
@@ -18,7 +18,7 @@ export const MdxCard = ({
       className={cn(
         "group relative rounded-lg border p-6 shadow-md transition-shadow hover:shadow-lg",
         disabled && "cursor-not-allowed opacity-60",
-        className
+        className,
       )}
       {...props}
     >
@@ -34,4 +34,4 @@ export const MdxCard = ({
       )}
     </div>
   );
-}
+};

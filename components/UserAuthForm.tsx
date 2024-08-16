@@ -9,7 +9,7 @@ import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { z } from "zod";
 import { useState } from "react";
-import { Icons } from "./Icon";
+import { Icons } from "./icon";
 import { toast } from "./ui/use-toast";
 import { signIn } from "next-auth/react";
 
@@ -17,10 +17,7 @@ interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 type FormData = z.infer<typeof userAuthSchema>;
 
-export default function UserAuthForm({
-  className,
-  ...props
-}: UserAuthFormProps) {
+export const UserAuthForm = ({ className, ...props }: UserAuthFormProps) => {
   const {
     register,
     handleSubmit,
@@ -33,10 +30,12 @@ export default function UserAuthForm({
   async function onSubmit(data: FormData) {
     setIsLoading(true);
 
-    return toast({
-      title: "メールアドレスを確認してください。",
-      description: "ログインリンクを送りました。",
+    toast({
+      title: "メールアドレス認証できませんでした。",
+      description: "この機能は現在実装中です。Githubでログインしてください。",
+      variant: "destructive",
     });
+    setIsLoading(false);
   }
 
   return (
@@ -63,7 +62,11 @@ export default function UserAuthForm({
               </p>
             )}
           </div>
-          <button className={cn(buttonVariants())} disabled={isLoading}>
+          <button
+            className={cn(buttonVariants())}
+            disabled={isLoading}
+            onClick={() => {}}
+          >
             {isLoading && <span>Loading...</span>}
             Sign In with Email
           </button>
@@ -97,4 +100,4 @@ export default function UserAuthForm({
       </button>
     </div>
   );
-}
+};

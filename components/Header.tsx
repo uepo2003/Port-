@@ -10,7 +10,6 @@ type headerProps = {
 };
 
 const Header = ({ isActive }: headerProps) => {
-  console.log(isActive);
   return (
     <div
       className={`sticky top-0 z-50 ${isActive ? "transition-opacity duration-500 opacity-100" : "transition-opacity duration-500 opacity-100"}`}

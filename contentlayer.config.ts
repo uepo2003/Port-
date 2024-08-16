@@ -24,7 +24,7 @@ export const Post = defineDocumentType(() => ({
       type: "string",
       required: true,
     },
-    authors: { type: 'list', of: { type: 'string' }, required: true },
+    authors: { type: "list", of: { type: "string" }, required: true },
   },
   computedFields: {
     slug: {

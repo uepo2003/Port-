@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { cn } from "@/lib/utils";
 
 interface CalloutProps {
@@ -7,11 +7,7 @@ interface CalloutProps {
   type?: "default" | "warning" | "danger";
 }
 
-
-export const Callout =({
-  children,
-  icon,
-}: CalloutProps) => {
+export const Callout = ({ children, icon }: CalloutProps) => {
   return (
     <div
       className={cn("my-6 flex items-center rounded-md border border-l-4 p-4")}
@@ -20,5 +16,4 @@ export const Callout =({
       <div>{children}</div>
     </div>
   );
-}
-
+};

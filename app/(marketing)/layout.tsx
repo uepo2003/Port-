@@ -21,7 +21,7 @@ export default function MarketingLayout({
     <div>
       <Header isActive={isHeaderActive} />
       <main>{children}</main>
-      <SiteFooter />
+      <SiteFooter className="border-t" />
     </div>
   );
 }
