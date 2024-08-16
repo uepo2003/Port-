@@ -1,5 +1,5 @@
 "use client";
-import { buttonVariants, Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { signOut } from "next-auth/react";
 import React from "react";
@@ -15,6 +15,8 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { Icons } from "@/components/icon";
+
+
 
 export const DeleteAcountButton = () => {
   const handleDeleteAccountClick = () => {

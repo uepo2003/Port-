@@ -1,5 +1,5 @@
 "use client";
-import React, { use } from "react";
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { Icons } from "@/components/icon";
 import {
@@ -12,11 +12,6 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { getCurrentUser } from "@/lib/session";
-import { SessionProvider, useSession } from "next-auth/react";
-import { db } from "@/lib/db";
-import { SubscriptionPlan } from "@prisma/client";
-import { useRouter } from "next/navigation";
 import { toast } from "@/components/ui/use-toast";
 
 const BillingPage = () => {
