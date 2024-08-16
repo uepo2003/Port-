@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Icons } from "@/components/icon";
+import { Icons } from "/Users/uenokairi/next/nextapp/components/icon";
 import {
   AlertDialog,
   AlertDialogAction,
