@@ -57,8 +57,11 @@ const ArticlePage = async ({ params }: ArticleProps) => {
         <div className="text-5xl font-bold tracking-tight text-gray-900 lg:text-5xl dark:text-white">
           {post.title}
         </div>
-        {post.content?.blocks // @ts-ignore
+
+        {post.content?.blocks 
+        // @ts-ignore
           .map((block, index) => {
+        // @ts-ignore
             switch (block.type) {
               case "header":
                 return (
