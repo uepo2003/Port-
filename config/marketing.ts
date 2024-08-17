@@ -1,6 +1,6 @@
-import { marketingNavConfig } from "@/types";
+import { MarketingNavConfig } from "@/types";
 
-export const maketingNavConfig: marketingNavConfig = {
+export const maketingNavConfig: MarketingNavConfig = {
   items: [
     {
       title: "ブログ",

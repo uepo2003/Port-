@@ -6,6 +6,23 @@ export type NavItem = {
   disabled?: boolean;
 };
 
+export interface siteCongig {
+  name: string;
+  description: string;
+  url: string;
+  ogImage: string;
+  links: {
+    x: string;
+    githubUepo: string;
+    github: string;
+    vercel: string;
+  };
+}
+
+
+export type MarketingNavConfig = {
+  items: NavItem []}
+;
 export type MainNavItem = NavItem;
 
 export type SidebarNavItem = {
