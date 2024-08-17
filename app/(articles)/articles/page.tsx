@@ -48,7 +48,7 @@ const ArticlesPage = async () => {
                     ?.data?.file?.url ?? "";
               }
               return (
-                <article className="bg-card rounded-lg overflow-hidden shadow-lg transition-all hover:shadow-2xl">
+                <article className="bg-card rounded-lg overflow-hidden shadow-lg transition-all hover:shadow-2xl" key={"article-component"}>
                   <Link
                     href={`articles/${post.id}`}
                     className="block"
