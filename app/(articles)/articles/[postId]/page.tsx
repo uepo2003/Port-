@@ -58,7 +58,9 @@ const ArticlePage = async ({ params }: ArticleProps) => {
           {post.title}
         </div>
 
-        {post.content?.blocks 
+        {
+        // @ts-ignore
+        post.content?.blocks 
         // @ts-ignore
           .map((block, index) => {
         // @ts-ignore
