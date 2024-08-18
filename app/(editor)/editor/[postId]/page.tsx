@@ -13,7 +13,10 @@ async function getPostForUser(postId: Post["id"], userId: User["id"]) {
   return await db.post.findFirst({
     where: {
       id: postId,
-      authorId: userId,
+      OR: [
+        { authorId: userId },
+        { authorId: "sample" }
+      ],
     },
   });
 }
