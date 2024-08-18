@@ -45,7 +45,7 @@ const IndexPage = () => {
         className="container py-8 md:py-12 lg:py-24 bg-slate-50 space-y-6"
       >
         <div className="text-center space-y-6 max-w-[58rem] mx-auto">
-          <h2 className="font-extrabold text-3xl md:text-6xl">
+          <h2 className="font-extrabold text-3xl md:text-6xl dark:text-muted-foreground">
             サービスの特徴
           </h2>
           <p className="text-muted-foreground sm:text-lg sm:leading-7">

@@ -22,7 +22,7 @@ const ArticlesPage = async () => {
     },
     where: { 
       published: true,
-      authorId: currentUser?.id,
+      authorId: currentUser?.id　|| "sample"
      },
   });
 
