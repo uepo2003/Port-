@@ -6,7 +6,7 @@ export type NavItem = {
   disabled?: boolean;
 };
 
-export interface siteCongig {
+export interface siteConfig {
   name: string;
   description: string;
   url: string;

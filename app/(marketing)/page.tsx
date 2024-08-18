@@ -3,7 +3,7 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { ContactCard } from "./_components/ContactCard";
-import { sitCongig } from "@/config/site";
+import { SiteConfig } from "@/config/site";
 
 const IndexPage = () => {
   return (
@@ -11,7 +11,7 @@ const IndexPage = () => {
       <section className="pt-6 md:pt-10 lg:py-32 pb-8 md:pb-12　">
         <div className="container text-center flex flex-col items-center gap-4 max-w-[64rem]">
           <Link
-            href={sitCongig.links.x}
+            href={SiteConfig.links.x}
             className="bg-muted px-4 py-1.5 rounded-2xl font-medium text-sm"
           >
             xをフォローする
@@ -30,7 +30,7 @@ const IndexPage = () => {
               はじめる
             </Link>
             <Link
-              href={sitCongig.links.github}
+              href={SiteConfig.links.github}
               className={cn(buttonVariants({ size: "lg", variant: "outline" }))}
               target="_blank"
               rel="noreferrer"

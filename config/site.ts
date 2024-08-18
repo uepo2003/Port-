@@ -1,6 +1,6 @@
-import { siteCongig } from "@/types";
+import { siteConfig } from "@/types";
 
-export const sitCongig: siteCongig = {
+export const SiteConfig: siteConfig = {
   name: "Portfolio",
   description: "ohyousan",
   url: "https://localhost:3000/",

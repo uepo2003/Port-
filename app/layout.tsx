@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { sitCongig } from "@/config/site";
+import { SiteConfig } from "@/config/site";
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
@@ -10,10 +10,10 @@ const fontoNoto = Noto_Sans_JP({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: sitCongig.name,
-    template: `%s | ${sitCongig.name}`,
+    default: SiteConfig.name,
+    template: `%s | ${SiteConfig.name}`,
   },
-  description: sitCongig.description,
+  description: SiteConfig.description,
   keywords: ["Next.js"],
   authors: [
     {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   // },
   twitter: {
     card: "summary_large_image",
-    title: sitCongig.name,
+    title: SiteConfig.name,
   },
 };
 
@@ -41,7 +41,7 @@ export default function RootLayout({
       <body
         className={cn(
           "bg-background antialiased min-h-screen",
-          fontoNoto.className,
+          fontoNoto.className
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

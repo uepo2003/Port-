@@ -1,4 +1,4 @@
-import { sitCongig } from "@/config/site";
+import { SiteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
@@ -12,7 +12,7 @@ export const SiteFooter = ({
         <p className="text-center text-sm md:text-left">
           Built by {""}
           <Link
-            href={sitCongig.links.githubUepo}
+            href={SiteConfig.links.githubUepo}
             className="underline underline-offset-4 font-medium"
             target="_blank"
             rel="noreferrer"
@@ -21,7 +21,7 @@ export const SiteFooter = ({
           </Link>
           .Hosted on {""}
           <Link
-            href={sitCongig.links.vercel}
+            href={SiteConfig.links.vercel}
             className="underline underline-offset-4 font-medium"
             target="_blank"
             rel="noreferrer"
