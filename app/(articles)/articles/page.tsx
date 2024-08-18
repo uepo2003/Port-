@@ -22,7 +22,10 @@ const ArticlesPage = async () => {
     },
     where: { 
       published: true,
-      authorId: currentUser?.id　|| "sample"
+      OR: [
+        { authorId: currentUser?.id },
+        { authorId: "sample" }
+      ],
      },
   });
 
