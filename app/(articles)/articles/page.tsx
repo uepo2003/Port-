@@ -5,8 +5,10 @@ import React from "react";
 import { ja } from "date-fns/locale/ja";
 import { ImageOff } from "lucide-react";
 import { format } from "date-fns";
+import { getCurrentUser } from "@/lib/session";
 
 const ArticlesPage = async () => {
+  const currentUser = await getCurrentUser();
   const posts = await db.post.findMany({
     select: {
       id: true,
@@ -18,7 +20,9 @@ const ArticlesPage = async () => {
     orderBy: {
       updatedAt: "desc",
     },
-    where: { published: true },
+    where: { 
+      published: "TRUE"
+     },
   });
 
   return posts.length !== 0 ? (
