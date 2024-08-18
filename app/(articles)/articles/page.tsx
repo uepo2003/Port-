@@ -21,7 +21,7 @@ const ArticlesPage = async () => {
       updatedAt: "desc",
     },
     where: { 
-      published: "TRUE"
+      published: true,
      },
   });
 
