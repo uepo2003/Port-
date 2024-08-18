@@ -22,6 +22,7 @@ const ArticlesPage = async () => {
     },
     where: { 
       published: true,
+      authorId: currentUser?.id,
      },
   });
 
