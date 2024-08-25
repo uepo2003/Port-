@@ -1,6 +1,6 @@
 import { db } from "@/lib/db";
 import { getCurrentUser } from "@/lib/session";
-import { DeleteAcountButton } from "./_components/DeleteAcountButton";
+import { DeleteAccountButton } from "./_components/DeleteAccountButton";
 import React from "react";
 import { SubscriptionDetailButton } from "./_components/SubscriptionDetailButton";
 import { ThemeSwitch } from "@/components/ThemeSwitch";
@@ -50,15 +50,7 @@ export default async function SettingsPage() {
             </p>
             <SubscriptionDetailButton />
           </section>
-          <form
-            id="deleteAccountForm"
-            action={async () => {
-              "use server";
-              await db.user.delete({ where: { id: currentUser?.id } });
-            }}
-          >
-            <DeleteAcountButton />
-          </form>
+            <DeleteAccountButton />
         </div>
       </div>
     </div>

@@ -15,18 +15,30 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { Icons } from "@/components/Icon";
+import { toast } from "@/components/ui/use-toast";
 
-export const DeleteAcountButton = () => {
-  const handleDeleteAccountClick = () => {
-    const form = document.getElementById(
-      "deleteAccountForm"
-    ) as HTMLFormElement | null;
-    if (form) {
-      form.requestSubmit();
-      signOut({ callbackUrl: "/" });
-    } else {
-      console.error("Form not found");
-    }
+export const DeleteAccountButton = () => {
+  const handleDeleteAccountClick = async () => {
+    await fetch("/api/delete", {
+      method: "DELETE",
+    })
+    .then((response) => {
+      const body = response.json()
+      return body;
+    })
+    .then((data) => {  
+      console.log(data);
+      if (data.status === 200) {
+        toast({
+          title: "アカウントを削除しました",
+          variant: "default",
+        })
+        signOut( {callbackUrl: "/" });
+      } 
+    })
+    .catch((error) => {
+        console.error("Error:", error);
+      });
   };
   return (
     <>
