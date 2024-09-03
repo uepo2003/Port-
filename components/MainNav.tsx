@@ -20,7 +20,7 @@ export const MainNav = ({ items, isLoggedin }: NavItemProps) => {
           href={"/dashboard"}
           className=" hidden md:flex items-center space-x-2"
         >
-          <span className="font-bold hidden sm:inline-block"></span>
+          <span className="font-bold hidden sm:inline-block">Blog Writer</span>
         </Link>
       ) : (
         <Link href={"/"} className=" hidden md:flex items-center space-x-2">

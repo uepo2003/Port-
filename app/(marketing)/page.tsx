@@ -17,7 +17,7 @@ const IndexPage = () => {
             xをフォローする
           </Link>
           <h1 className="font-extrabold text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
-            Port folio
+            Blog Writer
           </h1>
           <p className="text-muted-foreground sm:text-xl leadig-normal max-w-[42rem]">
             このアプリケーションはNext.jsで作られています
